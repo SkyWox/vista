@@ -20,7 +20,7 @@ else
    export VISTA_MODE="async"
 fi
 
-DOCKER_LOCALHOST=${DOCKER_LOCALHOST:-docker.for.mac.localhost}
+DOCKER_LOCALHOST=${DOCKER_LOCALHOST:192.168.99.100}
 
 echo "Setting up app:  $APP with docker localhost $DOCKER_LOCALHOST"
 
