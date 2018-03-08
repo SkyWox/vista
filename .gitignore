@@ -8,10 +8,10 @@ bundle
 Gemfile.lock
 ENVIRONMENT
 .wercker
-my-envs.sh
 tmp/
 /envs.sh
 data/
 vista.html
 .idea
 envs-edburns.sh
+.vagrant/
