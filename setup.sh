@@ -1,6 +1,6 @@
 set -ex
 
-requiredEnv=$(grep -p "^export" < $(dirname $0)/envs-example.sh | sed 's/export \([^=]*\)=.*/\1/')
+requiredEnv=$(grep "^export" < $(dirname $0)/envs-example.sh | sed 's/export \([^=]*\)=.*/\1/')
 
 for envVar in $requiredEnv; do
     if [ -z $(printenv $envVar)  ] ; then
@@ -13,7 +13,7 @@ done
 APP=${APP:-vista}
 export APP
 
-if [ $VISTA_MODE = flow ] ; then
+if [[ $VISTA_MODE = flow ]] ; then
    echo "Running in flow mode , unset VISTA_MODE to run async  and rerun setup to deploy async "
 else
    echo "Running in async mode , set VISTA_MODE to 'flow'  and rerun setup to deploy in flow mode "

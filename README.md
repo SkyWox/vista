@@ -17,6 +17,7 @@ moving parts have not been instrumented to run with proxies.
 
 ### Step 2: Set required env vars
 
+1. Enable sudo for the entire shell `sudo -s`
 1. Copy `envs-example.sh` to `envs.sh` and fill in all the required values.
 1. Run: `. ./envs.sh` - NOTE: You NEED the initial `.`
 
